@@ -41,9 +41,9 @@ class NewPost extends Component {
                     />
 
                     <Field 
-                        name="category"
+                        name="categories"
                         component={this.renderForm}
-                        label="Category"
+                        label="Categories"
                     />
 
                     <Field 
@@ -63,7 +63,7 @@ const validate = values => {
     const errors = {};
 
     if (!values.title || values.title.length < 3) errors.title = "Please enter a title greater than three characters long";
-    if (!values.category) errors.category = "Please enter a category";
+    if (!values.categories) errors.categories = "Please enter a category";
     if (!values.content) errors.content = "Please enter content for this post";
 
     return errors;

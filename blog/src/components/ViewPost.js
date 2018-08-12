@@ -22,15 +22,23 @@ class ViewPost extends Component {
         return(
             <div>
                 <Link to='/'>Back to Index</Link>
+                <h3>{post.title}</h3>
+                <h6>Categories: {post.categories}</h6>
+                <p>{post.content}</p>
+                <Link to={`/posts/editpost/${this.props.match.params.id}`}>
                 <button
-                    className='btn btn-danger pull-xs-right'
+                    className="btn btn-primary"
+                >
+                    Edit Post
+                </button>
+                </Link>
+                <button
+                    style={{ marginLeft: '10px' }}
+                    className='btn btn-danger'
                     onClick={this.handleDelete}
                 >
                     Delete Post
                 </button>
-                <h3>{post.title}</h3>
-                <h6>Categories: {post.categories}</h6>
-                <p>{post.content}</p>
             </div>
         )
     }
