@@ -13,10 +13,10 @@ export default class App extends Component {
     return (
       <div>
         <Switch>
-        <Route path='/' exact component={PostsIndex} />
-        <Route path='/posts/new' exact component={NewPost} />
-        <Route path='/posts/:id' exact component={ViewPost} />
-        <Route path='/posts/editpost/:id' exact component={EditPost} />
+          <Route path='/' exact component={PostsIndex} />
+          <Route path='/posts/new' exact component={NewPost} />
+          <Route path='/posts/:id' exact component={ViewPost} />
+          <Route path='/posts/editpost/:id' exact component={EditPost} />
         </Switch>
       </div>
     );
